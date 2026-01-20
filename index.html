@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostPro - Premium Hosting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">HostPro</div>
+        <div class="nav-links">
+            <a href="#" onclick="showSection('home')">Home Page</a>
+            <a href="#" onclick="showSection('domains')">Checked Domains</a>
+            <a href="#" onclick="showSection('contact')">Info</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="home-section">
+            <header>
+                <h1>HostPro</h1>
+                <p>Kelajak texnologiyalari bilan hosting xizmati</p>
+            </header>
+            <div class="domain-search">
+                <h3>Yangi Domen Qidirish</h3>
+                <div class="search-box">
+                    <input type="text" id="domainInput" placeholder="mysite.uz" autocomplete="off">
+                    <button onclick="checkDomain()">Tekshirish</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="domains-section" style="display: none;">
+            <h2>Tekshirilgan Domainlar</h2>
+            <div id="checkedDomainsList" class="history-list">
+                <p style="text-align: center; opacity: 0.5;">Hali domenlar tekshirilmagan.</p>
+            </div>
+        </section>
+
+
+
+        <section id="plans-section" style="display: none;">
+            <br>
+            <br>
+            <br>
+            <h2>Tarif Rejalari</h2>
+            <div class="plans" id="plansContainer">
+                </div>
+        </section>
+
+        <section id="contact-section" style="display: none;">
+            <h2>Info</h2>
+            <div class="glass-card contact-info">
+                <br>
+                <p>📩 Telegram: @HostPro_Official</p>
+                <p>📧 Email: javohirtoraquliyev@gmail.com</p>
+                <p>📞 Tel: +998 99 105 67 50</p>
+                <br>
+                <br>
+                <p>HostPro — Ishonchli raqamli kelajak poydevori
+
+Biz 2026-yilda tashkil etilgan, zamonaviy texnologiyalarga asoslangan hosting provayderimiz. Bizning maqsadimiz — har bir mijozga yuqori tezlikdagi SSD disklar, 99.9% uptime (uzluksiz ishlash) va maksimal darajadagi xavfsizlikni taqdim etishdir.
+
+Nima uchun biz?
+<br>
+
+LiteSpeed texnologiyasi: Saytlaringiz oddiy hostinglarga qaraganda 5 baravar tezroq yuklanadi.
+
+Xavfsiz domenlar: Biz orqali domenlarni real vaqt rejimida tekshirishingiz va ro'yxatdan o'tkazishingiz mumkin.
+
+24/7 Qo'llab-quvvatlash: Mutaxassislarimiz har qanday texnik masalada sizga yordam berishga tayyor.</p>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle">Natija</h2>
+            <p id="modalMessage"></p>
+            <button onclick="closeModal()">Yopish</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
