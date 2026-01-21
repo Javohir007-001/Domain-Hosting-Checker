@@ -70,7 +70,7 @@ async function selectPlan(planName) {
                 currentBtn.style.background = "#444";
                 currentBtn.disabled = true;
             }
-            showModal(`${planName} tarifi tanlandi!`);
+
         } else {
             showModal("Xatolik: " + error.message);
         }
